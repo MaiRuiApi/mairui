@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -46,3 +48,4 @@ htmlcov/
 !.env.example
 *.pem
 *.key
+.pypirc
