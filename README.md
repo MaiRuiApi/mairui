@@ -4,6 +4,14 @@
 
 源码仓库：[`https://github.com/MaiRuiApi/mairui`](https://github.com/MaiRuiApi/mairui)
 
+## 安装
+
+```bash
+pip install mairui
+```
+
+PyPI：[`https://pypi.org/project/mairui/`](https://pypi.org/project/mairui/)
+
 ## 30 秒上手
 
 ```python
