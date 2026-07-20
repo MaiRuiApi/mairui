@@ -4,22 +4,6 @@
 
 源码仓库：[`https://github.com/MaiRuiApi/mairui`](https://github.com/MaiRuiApi/mairui)
 
-## 安装
-
-```bash
-pip install mairui
-```
-
-尚未发布到 PyPI 时，可从本仓库安装：
-
-```bash
-pip install git+https://github.com/MaiRuiApi/mairui.git
-# 或克隆后本地安装
-git clone https://github.com/MaiRuiApi/mairui.git
-cd mairui
-pip install -e .
-```
-
 ## 30 秒上手
 
 ```python
