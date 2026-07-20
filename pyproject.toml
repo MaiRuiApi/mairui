@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mairui"
+version = "1.0.0"
+description = "麦蕊智数 api.mairuiapi.com Python SDK（官网公开接口封装）"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Mairui" }]
+keywords = ["mairui", "stock", "quant", "api", "a-share"]
+dependencies = [
+  "requests>=2.28.0",
+  "urllib3>=1.26.0",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Topic :: Office/Business :: Financial :: Investment",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://www.mairuiapi.com"
+Documentation = "https://mairuiapi.com/hsdata"
+Repository = "https://github.com/MaiRuiApi/mairui"
+Issues = "https://github.com/MaiRuiApi/mairui/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mairui*"]
