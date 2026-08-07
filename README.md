@@ -1,5 +1,8 @@
 # mairui — 麦蕊智数 Python SDK
 
+完整接口字段说明见 [API.md](./API.md)（含沪深数据中心 / 基金 / 量化因子）。方法对照见 [API_METHOD_MAP.md](./API_METHOD_MAP.md)。
+
+
 面向 `https://api.mairuiapi.com`，覆盖官网 API 文档（如 [`https://mairuiapi.com/hsdata`](https://mairuiapi.com/hsdata)）中对外公开的全部接口。
 
 源码仓库：[`https://github.com/MaiRuiApi/mairui`](https://github.com/MaiRuiApi/mairui)
