@@ -48,6 +48,10 @@ with Client(licence="YOUR-LICENCE-UUID") as api:
 
 只需绑定一次 `licence`，之后所有方法自动拼到 URL 末段。
 
+## 全接口 Demo
+
+见 [`demo/full_api/`](./demo/full_api/)：串行调阅全部公开方法（约 200+），证书仅读环境变量 `MAIRUI_LICENCE`。官网亦可下载同名 zip。
+
 ## 设计要点（效率与工程）
 
 | 措施 | 说明 |
