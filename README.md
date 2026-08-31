@@ -10,8 +10,10 @@
 ## 安装
 
 ```bash
-pip install mairui
+pip install -U mairui==1.2.1
 ```
+
+> **1.2.1**：与五语统一热修发版（本 SDK 由 requests 自动解压；建议同步升级）。
 
 PyPI：[`https://pypi.org/project/mairui/`](https://pypi.org/project/mairui/)
 
@@ -51,7 +53,7 @@ with Client(licence="YOUR-LICENCE-UUID") as api:
 | 措施 | 说明 |
 |------|------|
 | `requests.Session` + 连接池 | 默认 `pool_connections=32` / `pool_maxsize=64`，避免每次握手 |
-| Gzip | 默认 `Accept-Encoding: gzip, deflate` |
+| Gzip | 由 `requests` 默认协商并自动解压（勿自行关闭解压后硬编码 `Accept-Encoding`） |
 | 自动重试 | 对 `429/502/503/504` 指数退避重试（仅 GET） |
 | 超时 | 默认连接 5s / 读 60s，可构造时覆盖 |
 | `api.map(...)` | 线程池批量拉多标的，适合回测灌数 |

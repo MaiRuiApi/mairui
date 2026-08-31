@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mairui"
-version = "1.2.0"
+version = "1.2.1"
 description = "麦蕊智数 api.mairuiapi.com Python SDK（官网公开接口封装）"
 readme = "README.md"
 requires-python = ">=3.9"

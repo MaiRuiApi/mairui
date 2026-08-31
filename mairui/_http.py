@@ -87,10 +87,11 @@ class HttpTransport:
         self.session.mount("https://", adapter)
         self.session.mount("http://", adapter)
 
+        # Accept-Encoding 交由 requests 默认处理并自动解压；勿在 Session 上硬编码后
+        # 再配合关闭解压的自定义适配器，否则会出现 gzip 二进制「乱码」。
         default_headers: MutableMapping[str, str] = {
             "User-Agent": DEFAULT_UA,
             "Accept": "application/json, text/plain, */*",
-            "Accept-Encoding": "gzip, deflate",
             "Connection": "keep-alive",
         }
         if headers:
