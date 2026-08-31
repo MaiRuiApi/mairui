@@ -18,6 +18,9 @@ ALLOW_SKIP = frozenset({'stock_vip_history'})
 PREVIEW = 280
 QUIET = os.environ.get('MAIRUI_DEMO_QUIET', '').strip() in {'1', 'true', 'yes'}
 
+# 请填写你自己的证书 UUID（也可改用环境变量 MAIRUI_LICENCE）。切勿提交真实证书到公开仓库。
+LICENCE = ""
+
 def preview(data) -> str:
     try:
         s = json.dumps(data, ensure_ascii=False, default=str)
@@ -27,9 +30,9 @@ def preview(data) -> str:
     return s if len(s) <= PREVIEW else s[:PREVIEW] + '...'
 
 def main() -> int:
-    lic = os.environ.get('MAIRUI_LICENCE', '').strip()
+    lic = os.environ.get('MAIRUI_LICENCE', '').strip() or LICENCE.strip()
     if not lic:
-        print('请设置环境变量 MAIRUI_LICENCE=你的证书UUID')
+        print('请填写证书：设置环境变量 MAIRUI_LICENCE，或编辑本文件顶部 LICENCE = "你的证书UUID"')
         return 1
     api = Client(licence=lic, max_retries=2, timeout=(5, 90))
     results = []

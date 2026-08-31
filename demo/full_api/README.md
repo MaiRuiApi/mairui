@@ -4,14 +4,17 @@
 
 ## 准备
 
-1. 申请证书：https://www.mairuiapi.com （获取 licence UUID）
+1. 申请证书：https://www.mairuiapi.com （获取 **你自己的** licence UUID）
 2. 安装依赖：
 
 ```text
 pip install -U mairui==1.2.1
 ```
 
-3. 设置环境变量（**勿把证书写进代码**）：
+3. **填写证书（二选一，切勿使用他人证书、勿把真实证书提交到公开仓库）**
+
+- 推荐：复制 `.env.example` 为 `.env`，把 `MAIRUI_LICENCE=` 后面填成你的 UUID；或设置环境变量
+- 也可：打开运行入口源码，把顶部空字符串 `LICENCE = ""` 改成你的 UUID
 
 ```powershell
 $env:MAIRUI_LICENCE = "你的证书UUID"
@@ -20,6 +23,8 @@ $env:MAIRUI_LICENCE = "你的证书UUID"
 ```bash
 export MAIRUI_LICENCE='你的证书UUID'
 ```
+
+本包 **不附带** 任何可用证书；占位一律留空，由你自行填写。
 
 ## 运行
 
